@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.info-text {
+    font-family: 'Open Sans';
+    line-height: 33px;
+    font-size: 22px;
+}
+
+.info-container {
+    margin-top: 20px;
+}

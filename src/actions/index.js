@@ -5,6 +5,12 @@ export let setEmpInfo = (info) => {
     };
 }
 
+export let logout = () => {
+    return {
+        type: 'logout'
+    };
+}
+
 export let getClients = (info) => {
     return {
         type: 'getClients',

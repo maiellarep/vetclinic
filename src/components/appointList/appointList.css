@@ -1,0 +1,9 @@
+.appoint-link-container {
+    width: 100%;
+    text-align: left !important;
+    margin-top: 20px;
+}
+
+.appoint-link:hover {
+    background-color: black;
+}

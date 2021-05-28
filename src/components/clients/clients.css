@@ -1,0 +1,30 @@
+.search {
+    margin-top: 20px;
+    margin-bottom: 20px !important;
+}
+
+#searchQ {
+    width: 80%;
+    height: 40px;
+    font-size: 12pt;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-left: 8px;
+    outline: none;
+}
+
+.searchbtn {
+    height: 38px;
+    background: none;
+    border: none;
+    margin-left: -40px;
+    width: 30px;
+}
+
+.fa-search {
+    font-size: 14pt;
+}
+
+.fa-search:hover {
+    color: grey
+}

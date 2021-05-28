@@ -1,0 +1,15 @@
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+}
+
+
+.footer {
+    padding: 20px;
+    background-color: #dddcdb;
+    color: rgb(143, 142, 142);
+    font-family: 'Montserrat';
+    margin-top: 40px;
+}

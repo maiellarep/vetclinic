@@ -1,0 +1,51 @@
+.uinfo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    font-family: Montserrat;
+    align-items: flex-start;
+}
+
+.u-main-cont {
+    width: 100%;
+}
+
+.data {
+    text-align: left !important;
+    line-height: 28px;
+    margin-top: 20px;
+}
+.info-box {
+    width: 50%;
+
+}
+.pets-table td{
+    padding-right: 10px;
+}
+.pet-name {
+    font-size: 22px;
+}
+
+.newpet {
+    margin-left: 0;
+    float: right
+}
+.newpet:hover {
+    background-color: #000;
+}
+
+.info-box:first-child {
+    padding-right: 40px;
+    border-right: 1px solid #BABECC;
+}
+
+.info-box:last-child {
+    padding-left: 40px;
+    border-left: 1px solid #BABECC;
+}
+
+.box-title {
+    font-size: 28px;
+    font-weight: 500;
+}

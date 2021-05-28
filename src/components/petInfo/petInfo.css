@@ -1,0 +1,35 @@
+
+.pinfo-container {
+    width: 70%;
+    display: block;
+}
+
+.pet-div {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-img-div {
+    width: 40%;
+
+}
+
+.pet-info-div {
+    line-height: 28px;
+    margin-top: 20px;
+
+}
+
+.pet-photo {
+    width: 400px;
+}
+
+.button-link:hover {
+    background-color: black;
+}
+
+.pet-info-btns {
+    flex-wrap: wrap;
+}

@@ -1,0 +1,78 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
+
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.lgbutton, .lginput {
+    font-family: Montserrat;
+}
+
+.login-title {
+    color: #BABECC;
+    text-shadow: 1px 1px 1px #FFF;
+}
+
+.lgbutton, .lginput{
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 16px;
+    background-color:#EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+    width: 30%;
+    margin-top: 15px;
+}
+
+.lginput {
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    transition: all 0.2s ease-in-out;
+}
+
+.lginput:focus {
+    box-shadow: inset 1.5px 1.5px 1.5px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.lgbutton {
+    margin-top: 25px;
+    color:#61677B;
+    font-weight: bold;
+    box-shadow:  5px 5px 20px #BABECC, -5px -5px 20px rgb(241, 238, 238);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.lgbutton:hover {
+    box-shadow:  2px 2px 5px #BABECC;
+}
+
+.lgbutton:active {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.pswd {
+    width: 100%;
+}
+.fa-eye, .fa-eye-slash {
+    position:absolute;
+    font-size: 20px;
+    margin-left: -35px;
+    margin-top: 34px;
+    color: #393b41
+}
+
+.error-div {
+    width: 30%;
+    color: red;
+    padding-top: 8px;
+}
+
+.error-message {
+    font-size: 14px;
+}
