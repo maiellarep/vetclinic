@@ -73,7 +73,7 @@ class RegistedAppointments extends React.Component {
         if(this.props.login.isLogged === true) {
           return(
               <div className="container">
-                    <h1>Запись на прием</h1>
+                    <h1>Расписание моих приемов</h1>
                     <div className="">
                         <Calendar className="calendar" value={this.state.calendarDate} onChange={this.changeDate}/>
                     </div>

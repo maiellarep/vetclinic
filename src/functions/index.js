@@ -1,3 +1,5 @@
+import firebase from 'firebase'
+
 export function boolToWord (b) {
     if (b === true) {
         return "Да"
@@ -69,3 +71,19 @@ export function today() {
     today = yyyy+'-'+mm+'-'+dd;
     return today;
 }
+
+export const saveClientInfo = (id, info) => new Promise((resolve, reject) => {
+    firebase.database()
+        .ref('clients/' + id).set({
+            clientName: info.clientName,
+            phoneNumber: info.phoneNumber,
+            address: info.address,
+            email: info.email
+        }).then(() => {
+            resolve('success')
+        })
+        .catch((error) => {
+            reject(error.message)
+        });
+})
+  

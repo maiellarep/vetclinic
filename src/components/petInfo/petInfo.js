@@ -38,24 +38,6 @@ class PetInfo extends React.Component {
                 birthDate: snapshot.val().birthDate
             });
         });
-
-        const appointsRef = db.ref('appointments/' + this.props.match.params.petId);
-        let appointsArr = []
-        appointsRef.on('value', snapshot => {
-            let appointments = snapshot.val();
-            for(let a in appointments)
-            {
-                appointsArr.push({
-                    id: a,
-                    date: appointments[a].date,
-                    anamnesis: appointments[a].anamnesis,
-                    diagnosis: appointments[a].diagnosis
-                });
-            }
-            this.setState({
-                appoints: appointsArr
-            });
-        });
     }
 
     handleClick() {

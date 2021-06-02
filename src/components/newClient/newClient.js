@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from 'firebase';
 import {connect} from 'react-redux';
 import './newClient.css';
+import {saveClientInfo} from '../../functions/index';
 
 class NewClient extends React.Component {
     constructor(props) {
@@ -28,20 +29,20 @@ class NewClient extends React.Component {
 
     pushdb(e) {
         e.preventDefault();
-        const newReference = firebase.database()
+        firebase.database()
         .ref('clients/')
         .push()
-
-        newReference
-        .set({
-            clientName: this.state.clientName,
-            phoneNumber: this.state.phoneNumber,
-            address: this.state.address,
-            email: this.state.email
-        }).then(() => {
-            alert('Клиент добавлен успешно')
-            this.props.history.push('/')
-        });  
+        .then((ref) => {
+            console.log(ref.key)
+            saveClientInfo(ref.key, this.state)
+            .then(
+            result => {
+                alert('Клиент добавлен успешно')
+                this.props.history.push('/')
+            },
+            error => alert(error)
+        )
+        })  
     }
 
     render() {

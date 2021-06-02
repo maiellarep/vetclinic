@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
 import {connect} from 'react-redux';
+import {saveClientInfo} from '../../functions/index'
 
 class EditClient extends React.Component {
     constructor(props) {
@@ -18,7 +19,6 @@ class EditClient extends React.Component {
 
     componentDidMount() {
         const db = firebase.database();
-        console.log(this.props.match.params.clientId)
         db.ref('clients/' + this.props.match.params.clientId).once('value').then(snapshot => {
             this.setState ({
                 clientName: snapshot.val().clientName,
@@ -39,7 +39,15 @@ class EditClient extends React.Component {
 
     pushdb(e) {
         e.preventDefault();
-        firebase.database()
+        saveClientInfo(this.props.match.params.clientId, this.state)
+        .then(
+            result => {
+                alert("Данные клиента обновлены успешно");
+                this.props.history.goBack();
+            },
+            error => alert(error)
+        )
+       /* firebase.database()
         .ref('clients/' + this.props.match.params.clientId).update({
             clientName: this.state.clientName,
             phoneNumber: this.state.phoneNumber,
@@ -48,7 +56,7 @@ class EditClient extends React.Component {
         }).then(() => {
             alert("Данные клиента обновлены успешно");
             this.props.history.goBack();
-        });
+        });*/
     }
 
     render() {

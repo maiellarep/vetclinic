@@ -35,6 +35,7 @@ class Clients extends React.Component {
                     email: clients[client].email
                 });
             }
+
             this.setState({
                 clientsInfo: allCl
             });
@@ -67,7 +68,7 @@ class Clients extends React.Component {
 
     tableContent() {
         let content = [];
-        let returnValue = []
+        let tableContentValues = []
         if(this.state.searchQ === '') {
             content = this.state.clientsInfo
         }
@@ -75,9 +76,9 @@ class Clients extends React.Component {
             content = this.state.clientsInfo.filter(el => el.clientName.includes(this.state.searchQ) || el.address.includes(this.state.searchQ))
         }
 
-        content.map((cInfo, index) => {
+        content.map((cInfo) => {
             return(
-                returnValue.push (
+                tableContentValues.push (
                     <tr key={cInfo.id}>
                             <td>
                                 <Link to={/client/+ cInfo.id} className="link">
@@ -104,7 +105,7 @@ class Clients extends React.Component {
             
         })
 
-        return returnValue;
+        return tableContentValues;
     }
 
     render() {

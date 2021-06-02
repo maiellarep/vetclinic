@@ -53,6 +53,19 @@ class CancelAppointment extends React.Component {
         })
     }
 
+    petsDB = (path) => new Promise((resolve, reject) => {
+        let petName;
+        const ref = firebase.database.ref(path);
+        ref.on('value', (snapshot3)=> {
+            petName = snapshot3.val()   
+        }).then(() => {
+            resolve(petName)
+        })
+        .catch(() => {
+            reject('error')
+        })
+    })
+
     chooseVet(e) {
         const db = firebase.database();
         const ref = db.ref('employees/'+e.target.value+'/appointments/'+this.state.selectedDate);
@@ -87,7 +100,7 @@ class CancelAppointment extends React.Component {
                     appointsList: appointments
                 })
             }, 250)
-        })   
+        })  
     }
 
     delAppoint(time) {

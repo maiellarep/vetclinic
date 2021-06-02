@@ -11,8 +11,8 @@ function Footer() {
           </div>
           <div className="footer-part">
             <div>По вопросам поддержки:</div>
-            <div>Телефон: +380997411496</div>
-            <div>E-mail: karetnikovakate4@gmail.com</div>
+            <div>Телефон: +380998749302</div>
+            <div>E-mail: help@gmail.com</div>
           </div>
         </div>
       </footer>

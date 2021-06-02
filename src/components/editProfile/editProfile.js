@@ -40,7 +40,7 @@ class EditProfile extends React.Component {
             .ref('employees/'+ this.props.match.params.uid)
 
             newReference
-            .set(data).then(() => {
+            .update(data).then(() => {
                 alert("Данные профиля обновлены успешно");
                 this.props.history.push('/employees');
             });
